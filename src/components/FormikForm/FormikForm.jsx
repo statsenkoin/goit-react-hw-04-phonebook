@@ -16,7 +16,7 @@ const SubmitSchema = Yup.object().shape({
   number: Yup.string().phone('UA').required('Enter phone number'),
 });
 
-export const FormikForm = ({ onSubmit }) => {
+export function FormikForm({ onSubmit }) {
   return (
     <div>
       <Formik
@@ -49,6 +49,6 @@ export const FormikForm = ({ onSubmit }) => {
       </Formik>
     </div>
   );
-};
+}
 
 FormikForm.propTypes = { onSubmit: PropTypes.func.isRequired };

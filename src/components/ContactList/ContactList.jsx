@@ -6,7 +6,7 @@ import {
   DeleteButton,
 } from './ContactList.styled';
 
-const ContactList = ({ contacts, onClick }) => {
+export function ContactList({ contacts, onClick }) {
   return (
     <ContactListWrapper>
       {contacts.map(({ id, name, number }) => {
@@ -22,9 +22,7 @@ const ContactList = ({ contacts, onClick }) => {
       })}
     </ContactListWrapper>
   );
-};
-
-export { ContactList };
+}
 
 ContactList.propTypes = {
   contacts: PropTypes.arrayOf(
